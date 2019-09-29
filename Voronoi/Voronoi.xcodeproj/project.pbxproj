@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		BCDC4E43233FE7C800EE2743 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E42233FE7C800EE2743 /* main.cpp */; };
-		BCDC4E53233FE88900EE2743 /* Beachline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E52233FE88900EE2743 /* Beachline.cpp */; };
-		BCDC4E55233FE89B00EE2743 /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E54233FE89B00EE2743 /* Box.cpp */; };
-		BCDC4E57233FE8A900EE2743 /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E56233FE8A900EE2743 /* Event.cpp */; };
-		BCDC4E5A233FE8BA00EE2743 /* FortuneAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E58233FE8BA00EE2743 /* FortuneAlgorithm.cpp */; };
-		BCDC4E5C233FE8D800EE2743 /* Vector2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E5B233FE8D800EE2743 /* Vector2.cpp */; };
+		BCDC4E53233FE88900EE2743 /* BeachTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E52233FE88900EE2743 /* BeachTree.cpp */; };
+		BCDC4E55233FE89B00EE2743 /* Boundary.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E54233FE89B00EE2743 /* Boundary.cpp */; };
+		BCDC4E57233FE8A900EE2743 /* EventPoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E56233FE8A900EE2743 /* EventPoint.cpp */; };
+		BCDC4E5A233FE8BA00EE2743 /* Fortune.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E58233FE8BA00EE2743 /* Fortune.cpp */; };
+		BCDC4E5C233FE8D800EE2743 /* EuclidVec.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E5B233FE8D800EE2743 /* EuclidVec.cpp */; };
 		BCDC4E5E233FE8ED00EE2743 /* VoronoiDiagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E5D233FE8ED00EE2743 /* VoronoiDiagram.cpp */; };
+		BCE0313223409864008600EB /* Utilities.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCE0313123409864008600EB /* Utilities.cpp */; };
+		BCE0313523409AFB008600EB /* SVG.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCE0313423409AFB008600EB /* SVG.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,20 +34,24 @@
 		BC4B8D11233FEB3800728F2E /* output.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = output.svg; sourceTree = "<group>"; };
 		BCDC4E3F233FE7C800EE2743 /* Voronoi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Voronoi; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCDC4E42233FE7C800EE2743 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		BCDC4E4A233FE7FD00EE2743 /* Arc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arc.h; sourceTree = "<group>"; };
-		BCDC4E4B233FE80B00EE2743 /* Beachline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Beachline.h; sourceTree = "<group>"; };
-		BCDC4E4C233FE81C00EE2743 /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
-		BCDC4E4D233FE82800EE2743 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
-		BCDC4E4E233FE83800EE2743 /* FortuneAlgorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FortuneAlgorithm.h; sourceTree = "<group>"; };
-		BCDC4E4F233FE85000EE2743 /* PriorityQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
-		BCDC4E50233FE85F00EE2743 /* Vector2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector2.h; sourceTree = "<group>"; };
+		BCDC4E4A233FE7FD00EE2743 /* BeachElement.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeachElement.h; sourceTree = "<group>"; };
+		BCDC4E4B233FE80B00EE2743 /* BeachTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BeachTree.h; sourceTree = "<group>"; };
+		BCDC4E4C233FE81C00EE2743 /* Boundary.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boundary.h; sourceTree = "<group>"; };
+		BCDC4E4D233FE82800EE2743 /* EventPoint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EventPoint.h; sourceTree = "<group>"; };
+		BCDC4E4E233FE83800EE2743 /* Fortune.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fortune.h; sourceTree = "<group>"; };
+		BCDC4E4F233FE85000EE2743 /* Heap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Heap.h; sourceTree = "<group>"; };
+		BCDC4E50233FE85F00EE2743 /* EuclidVec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EuclidVec.h; sourceTree = "<group>"; };
 		BCDC4E51233FE86A00EE2743 /* VoronoiDiagram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoronoiDiagram.h; sourceTree = "<group>"; };
-		BCDC4E52233FE88900EE2743 /* Beachline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Beachline.cpp; sourceTree = "<group>"; };
-		BCDC4E54233FE89B00EE2743 /* Box.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Box.cpp; sourceTree = "<group>"; };
-		BCDC4E56233FE8A900EE2743 /* Event.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = "<group>"; };
-		BCDC4E58233FE8BA00EE2743 /* FortuneAlgorithm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FortuneAlgorithm.cpp; sourceTree = "<group>"; };
-		BCDC4E5B233FE8D800EE2743 /* Vector2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2.cpp; sourceTree = "<group>"; };
+		BCDC4E52233FE88900EE2743 /* BeachTree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BeachTree.cpp; sourceTree = "<group>"; };
+		BCDC4E54233FE89B00EE2743 /* Boundary.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Boundary.cpp; sourceTree = "<group>"; };
+		BCDC4E56233FE8A900EE2743 /* EventPoint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EventPoint.cpp; sourceTree = "<group>"; };
+		BCDC4E58233FE8BA00EE2743 /* Fortune.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Fortune.cpp; sourceTree = "<group>"; };
+		BCDC4E5B233FE8D800EE2743 /* EuclidVec.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EuclidVec.cpp; sourceTree = "<group>"; };
 		BCDC4E5D233FE8ED00EE2743 /* VoronoiDiagram.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VoronoiDiagram.cpp; sourceTree = "<group>"; };
+		BCE0313023409854008600EB /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		BCE0313123409864008600EB /* Utilities.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Utilities.cpp; sourceTree = "<group>"; };
+		BCE0313323409AEF008600EB /* SVG.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SVG.h; sourceTree = "<group>"; };
+		BCE0313423409AFB008600EB /* SVG.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SVG.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,21 +85,25 @@
 			isa = PBXGroup;
 			children = (
 				BCDC4E42233FE7C800EE2743 /* main.cpp */,
-				BCDC4E4A233FE7FD00EE2743 /* Arc.h */,
-				BCDC4E4B233FE80B00EE2743 /* Beachline.h */,
-				BCDC4E4C233FE81C00EE2743 /* Box.h */,
-				BCDC4E4D233FE82800EE2743 /* Event.h */,
-				BCDC4E4E233FE83800EE2743 /* FortuneAlgorithm.h */,
-				BCDC4E4F233FE85000EE2743 /* PriorityQueue.h */,
-				BCDC4E50233FE85F00EE2743 /* Vector2.h */,
+				BCDC4E4A233FE7FD00EE2743 /* BeachElement.h */,
+				BCDC4E4B233FE80B00EE2743 /* BeachTree.h */,
+				BCDC4E4C233FE81C00EE2743 /* Boundary.h */,
+				BCDC4E4D233FE82800EE2743 /* EventPoint.h */,
+				BCDC4E4E233FE83800EE2743 /* Fortune.h */,
+				BCDC4E4F233FE85000EE2743 /* Heap.h */,
+				BCDC4E50233FE85F00EE2743 /* EuclidVec.h */,
 				BCDC4E51233FE86A00EE2743 /* VoronoiDiagram.h */,
-				BCDC4E52233FE88900EE2743 /* Beachline.cpp */,
-				BCDC4E54233FE89B00EE2743 /* Box.cpp */,
-				BCDC4E56233FE8A900EE2743 /* Event.cpp */,
-				BCDC4E58233FE8BA00EE2743 /* FortuneAlgorithm.cpp */,
-				BCDC4E5B233FE8D800EE2743 /* Vector2.cpp */,
+				BCDC4E52233FE88900EE2743 /* BeachTree.cpp */,
+				BCDC4E54233FE89B00EE2743 /* Boundary.cpp */,
+				BCDC4E56233FE8A900EE2743 /* EventPoint.cpp */,
+				BCDC4E58233FE8BA00EE2743 /* Fortune.cpp */,
+				BCDC4E5B233FE8D800EE2743 /* EuclidVec.cpp */,
 				BCDC4E5D233FE8ED00EE2743 /* VoronoiDiagram.cpp */,
 				BC4B8D11233FEB3800728F2E /* output.svg */,
+				BCE0313023409854008600EB /* Utilities.h */,
+				BCE0313123409864008600EB /* Utilities.cpp */,
+				BCE0313323409AEF008600EB /* SVG.h */,
+				BCE0313423409AFB008600EB /* SVG.cpp */,
 			);
 			path = Voronoi;
 			sourceTree = "<group>";
@@ -155,13 +165,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCDC4E57233FE8A900EE2743 /* Event.cpp in Sources */,
-				BCDC4E5C233FE8D800EE2743 /* Vector2.cpp in Sources */,
-				BCDC4E55233FE89B00EE2743 /* Box.cpp in Sources */,
-				BCDC4E5A233FE8BA00EE2743 /* FortuneAlgorithm.cpp in Sources */,
+				BCE0313523409AFB008600EB /* SVG.cpp in Sources */,
+				BCE0313223409864008600EB /* Utilities.cpp in Sources */,
+				BCDC4E57233FE8A900EE2743 /* EventPoint.cpp in Sources */,
+				BCDC4E5C233FE8D800EE2743 /* EuclidVec.cpp in Sources */,
+				BCDC4E55233FE89B00EE2743 /* Boundary.cpp in Sources */,
+				BCDC4E5A233FE8BA00EE2743 /* Fortune.cpp in Sources */,
 				BCDC4E5E233FE8ED00EE2743 /* VoronoiDiagram.cpp in Sources */,
 				BCDC4E43233FE7C800EE2743 /* main.cpp in Sources */,
-				BCDC4E53233FE88900EE2743 /* Beachline.cpp in Sources */,
+				BCDC4E53233FE88900EE2743 /* BeachTree.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

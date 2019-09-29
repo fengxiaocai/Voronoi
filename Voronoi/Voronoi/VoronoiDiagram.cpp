@@ -1,5 +1,5 @@
 //
-//  main.cpp
+//  VoronoiDiagram.cpp
 //  Voronoi
 //
 //  Created by Ayush Tiwari on 28/09/19.
@@ -7,62 +7,62 @@
 //
 
 #include "VoronoiDiagram.h"
-// STL
+
 #include <unordered_set>
 
-VoronoiDiagram::VoronoiDiagram(const std::vector<Vector2>& points)
+VoronoiDiagram::VoronoiDiagram(const std::vector<EuclidVec>& points)
 {
-    mSites.reserve(points.size());
-    mFaces.reserve(points.size());
+    Sites.reserve(points.size());
+    Faces.reserve(points.size());
     for(std::size_t i = 0; i < points.size(); ++i)
     {
-        mSites.push_back(VoronoiDiagram::Site{i, points[i], nullptr});
-        mFaces.push_back(VoronoiDiagram::Face{&mSites.back(), nullptr});
-        mSites.back().face = &mFaces.back();
+        Sites.push_back(VoronoiDiagram::Site{i, points[i], nullptr});
+        Faces.push_back(VoronoiDiagram::Face{&Sites.back(), nullptr});
+        Sites.back().face = &Faces.back();
     }
 }
 
 VoronoiDiagram::Site* VoronoiDiagram::getSite(std::size_t i)
 {
-    return &mSites[i];
+    return &Sites[i];
 }
 
-std::size_t VoronoiDiagram::getNbSites() const
+std::size_t VoronoiDiagram::getSitesCount() const
 {
-    return mSites.size();
+    return Sites.size();
 }
 
 VoronoiDiagram::Face* VoronoiDiagram::getFace(std::size_t i)
 {
-    return &mFaces[i];
+    return &Faces[i];
 }
 
 const std::list<VoronoiDiagram::Vertex>& VoronoiDiagram::getVertices() const
 {
-    return mVertices;
+    return Vertices;
 }
 
 const std::list<VoronoiDiagram::HalfEdge>& VoronoiDiagram::getHalfEdges() const
 {
-    return mHalfEdges;
+    return HalfEdges;
 }
 
-bool VoronoiDiagram::intersect(Box box)
+bool VoronoiDiagram::intersect(Boundary box)
 {
     bool error = false;
     std::unordered_set<HalfEdge*> processedHalfEdges;
     std::unordered_set<Vertex*> verticesToRemove;
-    for (const Site& site : mSites)
+    for (const Site& site : Sites)
     {
-        HalfEdge* halfEdge = site.face->outerComponent;
+        HalfEdge* halfEdge = site.face->innerHalfEdge;
         bool inside = box.contains(halfEdge->origin->point);
         bool outerComponentDirty = !inside;
         HalfEdge* incomingHalfEdge = nullptr; // First half edge coming in the box
         HalfEdge* outgoingHalfEdge = nullptr; // Last half edge going out the box
-        Box::Side incomingSide, outgoingSide;
+        Boundary::Side incomingSide, outgoingSide;
         do
         {
-            std::array<Box::Intersection, 2> intersections;
+            std::array<Boundary::Intersection, 2> intersections;
             int nbIntersections = box.getIntersections(halfEdge->origin->point, halfEdge->destination->point, intersections);
             bool nextInside = box.contains(halfEdge->destination->point);
             HalfEdge* nextHalfEdge = halfEdge->next;
@@ -144,13 +144,13 @@ bool VoronoiDiagram::intersect(Box box)
             halfEdge = nextHalfEdge;
             // Update inside
             inside = nextInside;
-        } while (halfEdge != site.face->outerComponent);
+        } while (halfEdge != site.face->innerHalfEdge);
         // Link the last and the first half edges inside the box
         if (outerComponentDirty && incomingHalfEdge != nullptr)
             link(box, outgoingHalfEdge, outgoingSide, incomingHalfEdge, incomingSide);
         // Set outer component
         if (outerComponentDirty)
-            site.face->outerComponent = incomingHalfEdge;
+            site.face->innerHalfEdge = incomingHalfEdge;
     }
     // Remove vertices
     for (auto& vertex : verticesToRemove)
@@ -159,26 +159,26 @@ bool VoronoiDiagram::intersect(Box box)
     return !error;
 }
 
-VoronoiDiagram::Vertex* VoronoiDiagram::createVertex(Vector2 point)
+VoronoiDiagram::Vertex* VoronoiDiagram::createVertex(EuclidVec point)
 {
-    mVertices.emplace_back();
-    mVertices.back().point = point;
-    mVertices.back().it = std::prev(mVertices.end());
-    return &mVertices.back();
+    Vertices.emplace_back();
+    Vertices.back().point = point;
+    Vertices.back().it = std::prev(Vertices.end());
+    return &Vertices.back();
 }
 
-VoronoiDiagram::Vertex* VoronoiDiagram::createCorner(Box box, Box::Side side)
+VoronoiDiagram::Vertex* VoronoiDiagram::createCorner(Boundary box, Boundary::Side side)
 {
     switch (side)
     {
-        case Box::Side::LEFT:
-            return createVertex(Vector2(box.left, box.top));
-        case Box::Side::BOTTOM:
-            return createVertex(Vector2(box.left, box.bottom));
-        case Box::Side::RIGHT:
-            return createVertex(Vector2(box.right, box.bottom));
-        case Box::Side::TOP:
-            return createVertex(Vector2(box.right, box.top));
+        case Boundary::Side::LEFT:
+            return createVertex(EuclidVec(box.left, box.top));
+        case Boundary::Side::BOTTOM:
+            return createVertex(EuclidVec(box.left, box.bottom));
+        case Boundary::Side::RIGHT:
+            return createVertex(EuclidVec(box.right, box.bottom));
+        case Boundary::Side::TOP:
+            return createVertex(EuclidVec(box.right, box.top));
         default:
             return nullptr;
     }
@@ -186,15 +186,15 @@ VoronoiDiagram::Vertex* VoronoiDiagram::createCorner(Box box, Box::Side side)
 
 VoronoiDiagram::HalfEdge* VoronoiDiagram::createHalfEdge(Face* face)
 {
-    mHalfEdges.emplace_back();
-    mHalfEdges.back().incidentFace = face;
-    mHalfEdges.back().it = std::prev(mHalfEdges.end());
-    if(face->outerComponent == nullptr)
-        face->outerComponent = &mHalfEdges.back();
-    return &mHalfEdges.back();
+    HalfEdges.emplace_back();
+    HalfEdges.back().incidentFace = face;
+    HalfEdges.back().it = std::prev(HalfEdges.end());
+    if(face->innerHalfEdge == nullptr)
+        face->innerHalfEdge = &HalfEdges.back();
+    return &HalfEdges.back();
 }
 
-void VoronoiDiagram::link(Box box, HalfEdge* start, Box::Side startSide, HalfEdge* end, Box::Side endSide)
+void VoronoiDiagram::link(Boundary box, HalfEdge* start, Boundary::Side startSide, HalfEdge* end, Boundary::Side endSide)
 {
     HalfEdge* halfEdge = start;
     int side = static_cast<int>(startSide);
@@ -204,7 +204,7 @@ void VoronoiDiagram::link(Box box, HalfEdge* start, Box::Side startSide, HalfEdg
         halfEdge->next = createHalfEdge(start->incidentFace);
         halfEdge->next->prev = halfEdge;
         halfEdge->next->origin = halfEdge->destination;
-        halfEdge->next->destination = createCorner(box, static_cast<Box::Side>(side));
+        halfEdge->next->destination = createCorner(box, static_cast<Boundary::Side>(side));
         halfEdge = halfEdge->next;
     }
     halfEdge->next = createHalfEdge(start->incidentFace);
@@ -217,10 +217,10 @@ void VoronoiDiagram::link(Box box, HalfEdge* start, Box::Side startSide, HalfEdg
 
 void VoronoiDiagram::removeVertex(Vertex* vertex)
 {
-    mVertices.erase(vertex->it);
+    Vertices.erase(vertex->it);
 }
 
 void VoronoiDiagram::removeHalfEdge(HalfEdge* halfEdge)
 {
-    mHalfEdges.erase(halfEdge->it);
+    HalfEdges.erase(halfEdge->it);
 }

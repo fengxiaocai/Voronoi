@@ -1,20 +1,23 @@
 //
-//  main.cpp
+//  VoronoiDiagram.h
 //  Voronoi
 //
 //  Created by Ayush Tiwari on 28/09/19.
 //  Copyright © 2019 Ayush Tiwari. All rights reserved.
 //
+
 #pragma once
 
-// STL
 #include <vector>
 #include <list>
-// My includes
-#include "Box.h"
 
-class FortuneAlgorithm;
+#include "Boundary.h"
 
+class Fortune;
+
+/**
+    DCEL Implementation.
+ */
 class VoronoiDiagram
 {
 public:
@@ -24,13 +27,13 @@ public:
     struct Site
     {
         std::size_t index;
-        Vector2 point;
+        EuclidVec point;
         Face* face;
     };
 
     struct Vertex
     {
-        Vector2 point;
+        EuclidVec point;
 
     private:
         friend VoronoiDiagram;
@@ -54,10 +57,10 @@ public:
     struct Face
     {
         Site* site;
-        HalfEdge* outerComponent;
+        HalfEdge* innerHalfEdge;
     };
 
-    VoronoiDiagram(const std::vector<Vector2>& points);
+    VoronoiDiagram(const std::vector<EuclidVec>& points);
 
     // Remove copy operations
     VoronoiDiagram(const VoronoiDiagram&) = delete;
@@ -67,31 +70,31 @@ public:
     VoronoiDiagram(VoronoiDiagram&&) = default;
     VoronoiDiagram& operator=(VoronoiDiagram&&) = default;
 
-    // Accessors
+    // Get Functions
     Site* getSite(std::size_t i);
-    std::size_t getNbSites() const;
+    std::size_t getSitesCount() const;
     Face* getFace(std::size_t i);
     const std::list<Vertex>& getVertices() const;
     const std::list<HalfEdge>& getHalfEdges() const;
 
-    // Intersection with a box
-    bool intersect(Box box);
+    // Taking care of intersections with the Boundary
+    bool intersect(Boundary boundary);
 
 private:
-    std::vector<Site> mSites;
-    std::vector<Face> mFaces;
-    std::list<Vertex> mVertices;
-    std::list<HalfEdge> mHalfEdges;
+    std::vector<Site> Sites;
+    std::vector<Face> Faces;
+    std::list<Vertex> Vertices;
+    std::list<HalfEdge> HalfEdges;
 
     // Diagram construction
-    friend FortuneAlgorithm;
+    friend Fortune;
 
-    Vertex* createVertex(Vector2 point);
-    Vertex* createCorner(Box box, Box::Side side);
+    Vertex* createVertex(EuclidVec point);
+    Vertex* createCorner(Boundary box, Boundary::Side side);
     HalfEdge* createHalfEdge(Face* face);
 
     // Intersection with a box
-    void link(Box box, HalfEdge* start, Box::Side startSide, HalfEdge* end, Box::Side endSide);
+    void link(Boundary box, HalfEdge* start, Boundary::Side startSide, HalfEdge* end, Boundary::Side endSide);
     void removeVertex(Vertex* vertex);
     void removeHalfEdge(HalfEdge* halfEdge);
 };

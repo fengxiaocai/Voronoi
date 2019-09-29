@@ -1,5 +1,5 @@
 //
-//  main.cpp
+//  Heap.h
 //  Voronoi
 //
 //  Created by Ayush Tiwari on 28/09/19.
@@ -8,16 +8,16 @@
 
 #pragma once
 
-// STL
 #include <ostream>
 #include <vector>
 #include <memory>
 
+/// Priority Queue Implementation.
 template<typename T>
-class PriorityQueue
+class Heap
 {
 public:
-    PriorityQueue()
+    Heap()
     {
 
     }
@@ -136,7 +136,7 @@ private:
 };
 
 template <typename T>
-std::ostream& operator<<(std::ostream& os, const PriorityQueue<T>& queue)
+std::ostream& operator<<(std::ostream& os, const Heap<T>& queue)
 {
     return queue.print(os);
 }

@@ -1,5 +1,5 @@
 //
-//  main.cpp
+//  BeachElement.h
 //  Voronoi
 //
 //  Created by Ayush Tiwari on 28/09/19.
@@ -8,27 +8,30 @@
 
 #pragma once
 
-// My includes
 #include "VoronoiDiagram.h"
 
-class Event;
+class EventPoint;
 
-struct Arc
+///Class for an Element in the BeacLine.
+struct BeachElement
 {
     enum class Color{RED, BLACK};
 
     // Hierarchy
-    Arc* parent;
-    Arc* left;
-    Arc* right;
+    BeachElement* parent;
+    BeachElement* left;
+    BeachElement* right;
+    
     // Diagram
     VoronoiDiagram::Site* site;
     VoronoiDiagram::HalfEdge* leftHalfEdge;
     VoronoiDiagram::HalfEdge* rightHalfEdge;
-    Event* event;
+    EventPoint* event;
+    
     // Optimizations
-    Arc* prev;
-    Arc* next;
+    BeachElement* prev;
+    BeachElement* next;
+    
     // Only for balancing
     Color color;
 };

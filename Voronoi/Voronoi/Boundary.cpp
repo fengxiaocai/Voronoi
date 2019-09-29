@@ -1,20 +1,20 @@
 //
-//  main.cpp
+//  Boundary.cpp
 //  Voronoi
 //
 //  Created by Ayush Tiwari on 28/09/19.
 //  Copyright © 2019 Ayush Tiwari. All rights reserved.
 //
 
-#include "Box.h"
+#include "Boundary.h"
 
-bool Box::contains(const Vector2& point) const
+bool Boundary::contains(const EuclidVec& point) const
 {
     return point.x >= left - EPSILON && point.x <= right + EPSILON &&
         point.y >= bottom  - EPSILON && point.y <= top + EPSILON;
 }
 
-Box::Intersection Box::getFirstIntersection(const Vector2& origin, const Vector2& direction) const
+Boundary::Intersection Boundary::getFirstIntersection(const EuclidVec& origin, const EuclidVec& direction) const
 {
     // origin must be in the box
     Intersection intersection;
@@ -52,10 +52,10 @@ Box::Intersection Box::getFirstIntersection(const Vector2& origin, const Vector2
     return intersection;
 }
 
-int Box::getIntersections(const Vector2& origin, const Vector2& destination, std::array<Intersection, 2>& intersections) const
+int Boundary::getIntersections(const EuclidVec& origin, const EuclidVec& destination, std::array<Intersection, 2>& intersections) const
 {
     // WARNING: If the intersection is a corner, both intersections are equals
-    Vector2 direction = destination - origin;
+    EuclidVec direction = destination - origin;
     std::array<double, 2> t;
     std::size_t i = 0; // index of the current intersection
     // Left
