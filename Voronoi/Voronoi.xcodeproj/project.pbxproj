@@ -1,0 +1,324 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BCDC4E43233FE7C800EE2743 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E42233FE7C800EE2743 /* main.cpp */; };
+		BCDC4E53233FE88900EE2743 /* Beachline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E52233FE88900EE2743 /* Beachline.cpp */; };
+		BCDC4E55233FE89B00EE2743 /* Box.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E54233FE89B00EE2743 /* Box.cpp */; };
+		BCDC4E57233FE8A900EE2743 /* Event.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E56233FE8A900EE2743 /* Event.cpp */; };
+		BCDC4E5A233FE8BA00EE2743 /* FortuneAlgorithm.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E58233FE8BA00EE2743 /* FortuneAlgorithm.cpp */; };
+		BCDC4E5C233FE8D800EE2743 /* Vector2.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E5B233FE8D800EE2743 /* Vector2.cpp */; };
+		BCDC4E5E233FE8ED00EE2743 /* VoronoiDiagram.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BCDC4E5D233FE8ED00EE2743 /* VoronoiDiagram.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		BCDC4E3D233FE7C800EE2743 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		BC4B8D11233FEB3800728F2E /* output.svg */ = {isa = PBXFileReference; lastKnownFileType = text; path = output.svg; sourceTree = "<group>"; };
+		BCDC4E3F233FE7C800EE2743 /* Voronoi */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Voronoi; sourceTree = BUILT_PRODUCTS_DIR; };
+		BCDC4E42233FE7C800EE2743 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BCDC4E4A233FE7FD00EE2743 /* Arc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Arc.h; sourceTree = "<group>"; };
+		BCDC4E4B233FE80B00EE2743 /* Beachline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Beachline.h; sourceTree = "<group>"; };
+		BCDC4E4C233FE81C00EE2743 /* Box.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Box.h; sourceTree = "<group>"; };
+		BCDC4E4D233FE82800EE2743 /* Event.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		BCDC4E4E233FE83800EE2743 /* FortuneAlgorithm.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FortuneAlgorithm.h; sourceTree = "<group>"; };
+		BCDC4E4F233FE85000EE2743 /* PriorityQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PriorityQueue.h; sourceTree = "<group>"; };
+		BCDC4E50233FE85F00EE2743 /* Vector2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Vector2.h; sourceTree = "<group>"; };
+		BCDC4E51233FE86A00EE2743 /* VoronoiDiagram.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VoronoiDiagram.h; sourceTree = "<group>"; };
+		BCDC4E52233FE88900EE2743 /* Beachline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Beachline.cpp; sourceTree = "<group>"; };
+		BCDC4E54233FE89B00EE2743 /* Box.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Box.cpp; sourceTree = "<group>"; };
+		BCDC4E56233FE8A900EE2743 /* Event.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Event.cpp; sourceTree = "<group>"; };
+		BCDC4E58233FE8BA00EE2743 /* FortuneAlgorithm.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FortuneAlgorithm.cpp; sourceTree = "<group>"; };
+		BCDC4E5B233FE8D800EE2743 /* Vector2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Vector2.cpp; sourceTree = "<group>"; };
+		BCDC4E5D233FE8ED00EE2743 /* VoronoiDiagram.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VoronoiDiagram.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BCDC4E3C233FE7C800EE2743 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BCDC4E36233FE7C800EE2743 = {
+			isa = PBXGroup;
+			children = (
+				BCDC4E41233FE7C800EE2743 /* Voronoi */,
+				BCDC4E40233FE7C800EE2743 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BCDC4E40233FE7C800EE2743 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BCDC4E3F233FE7C800EE2743 /* Voronoi */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BCDC4E41233FE7C800EE2743 /* Voronoi */ = {
+			isa = PBXGroup;
+			children = (
+				BCDC4E42233FE7C800EE2743 /* main.cpp */,
+				BCDC4E4A233FE7FD00EE2743 /* Arc.h */,
+				BCDC4E4B233FE80B00EE2743 /* Beachline.h */,
+				BCDC4E4C233FE81C00EE2743 /* Box.h */,
+				BCDC4E4D233FE82800EE2743 /* Event.h */,
+				BCDC4E4E233FE83800EE2743 /* FortuneAlgorithm.h */,
+				BCDC4E4F233FE85000EE2743 /* PriorityQueue.h */,
+				BCDC4E50233FE85F00EE2743 /* Vector2.h */,
+				BCDC4E51233FE86A00EE2743 /* VoronoiDiagram.h */,
+				BCDC4E52233FE88900EE2743 /* Beachline.cpp */,
+				BCDC4E54233FE89B00EE2743 /* Box.cpp */,
+				BCDC4E56233FE8A900EE2743 /* Event.cpp */,
+				BCDC4E58233FE8BA00EE2743 /* FortuneAlgorithm.cpp */,
+				BCDC4E5B233FE8D800EE2743 /* Vector2.cpp */,
+				BCDC4E5D233FE8ED00EE2743 /* VoronoiDiagram.cpp */,
+				BC4B8D11233FEB3800728F2E /* output.svg */,
+			);
+			path = Voronoi;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BCDC4E3E233FE7C800EE2743 /* Voronoi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BCDC4E46233FE7C800EE2743 /* Build configuration list for PBXNativeTarget "Voronoi" */;
+			buildPhases = (
+				BCDC4E3B233FE7C800EE2743 /* Sources */,
+				BCDC4E3C233FE7C800EE2743 /* Frameworks */,
+				BCDC4E3D233FE7C800EE2743 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Voronoi;
+			productName = Voronoi;
+			productReference = BCDC4E3F233FE7C800EE2743 /* Voronoi */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BCDC4E37233FE7C800EE2743 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Ayush Tiwari";
+				TargetAttributes = {
+					BCDC4E3E233FE7C800EE2743 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = BCDC4E3A233FE7C800EE2743 /* Build configuration list for PBXProject "Voronoi" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BCDC4E36233FE7C800EE2743;
+			productRefGroup = BCDC4E40233FE7C800EE2743 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BCDC4E3E233FE7C800EE2743 /* Voronoi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BCDC4E3B233FE7C800EE2743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BCDC4E57233FE8A900EE2743 /* Event.cpp in Sources */,
+				BCDC4E5C233FE8D800EE2743 /* Vector2.cpp in Sources */,
+				BCDC4E55233FE89B00EE2743 /* Box.cpp in Sources */,
+				BCDC4E5A233FE8BA00EE2743 /* FortuneAlgorithm.cpp in Sources */,
+				BCDC4E5E233FE8ED00EE2743 /* VoronoiDiagram.cpp in Sources */,
+				BCDC4E43233FE7C800EE2743 /* main.cpp in Sources */,
+				BCDC4E53233FE88900EE2743 /* Beachline.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BCDC4E44233FE7C800EE2743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BCDC4E45233FE7C800EE2743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BCDC4E47233FE7C800EE2743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73TB68RVF7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BCDC4E48233FE7C800EE2743 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73TB68RVF7;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BCDC4E3A233FE7C800EE2743 /* Build configuration list for PBXProject "Voronoi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCDC4E44233FE7C800EE2743 /* Debug */,
+				BCDC4E45233FE7C800EE2743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BCDC4E46233FE7C800EE2743 /* Build configuration list for PBXNativeTarget "Voronoi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BCDC4E47233FE7C800EE2743 /* Debug */,
+				BCDC4E48233FE7C800EE2743 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BCDC4E37233FE7C800EE2743 /* Project object */;
+}
