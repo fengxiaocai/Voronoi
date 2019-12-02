@@ -1,6 +1,6 @@
 # Fortune's Algorithm
 
-This is an implementation of Fortune's Algo to build Voronoi Diagrams
+This is an implementation of Fortune's Algorithm to build Voronoi Diagrams
 
 ### Getting Started
 
